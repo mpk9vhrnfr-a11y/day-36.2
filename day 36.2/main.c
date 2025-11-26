@@ -1,15 +1,28 @@
-//
-//  main.c
-//  day 36.2
-//
-//  Created by Sanaa Kumar on 26/11/25.
-//
-
-#include <stdlib.h>
 #include <stdio.h>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
-    return EXIT_SUCCESS;
+int main(void) {
+    int a[10][10], r, c, i, j, sum = 0;
+
+    printf("Enter number of rows: ");
+    scanf("%d", &r);
+
+    printf("Enter number of columns: ");
+    scanf("%d", &c);
+
+    printf("Enter the elements of the matrix:\n");
+    for(i = 0; i < r; i++) {
+        for(j = 0; j < c; j++) {
+            scanf("%d", &a[i][j]);
+        }
+    }
+
+    for(i = 0; i < r; i++) {
+        for(j = 0; j < c; j++) {
+            sum += a[i][j];
+        }
+    }
+
+    printf("Sum of all elements = %d\n", sum);
+
+    return 0;
 }
